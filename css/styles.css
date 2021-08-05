@@ -207,9 +207,22 @@ img {
   padding-bottom: 0;
 }
 
+.features-description {
+  width: 270px;
+}
+
 .features-list {
   display: flex;
   justify-content: space-between;
+}
+.features-icon {
+  padding: 25px 100px;
+  background-color: var(--background-extra-color);
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
 }
 .features-text {
   margin-top: 10px;
@@ -285,22 +298,23 @@ img {
   margin-top: 10px;
 }
 
-.social-links {
+.social-class {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 16px 32px 30px 32px;
   padding: 0;
 }
 
 .social-link {
-  padding: 0;
-  border-radius: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: var(--main-text-color);
   fill: var(--accent-color);
-  padding: 12px 12px;
 }
 
 .social-link:hover,
@@ -308,8 +322,8 @@ img {
   background-color: var(--aditional-color);
 }
 
-.social-item:hover,
-.social-item:focus {
+.social-link:hover .social-item,
+.social-link:focus .social-item {
   fill: var(--main-text-color);
 }
 
@@ -325,41 +339,49 @@ img {
   justify-content: center;
 }
 
-.clients-box {
-  width: 170px;
-  height: 92px;
-  border: 1px solid var(--accent-color);
+.clients-item {
+  padding: 16px 32px;
   box-sizing: border-box;
+  border: 1px solid var(--accent-color);
   border-radius: 4px;
-  fill: currentColor;
-  cursor: pointer;
 }
 
-.clients-box:not(:last-child) {
+.clients-item:not(:last-child) {
   margin-right: 30px;
 }
-.clients-box:focus,
-.clients-box:hover {
-  border-color: var(--aditional-color);
-}
 
-.clients-item {
+.clients-link {
+  display: block;
   fill: var(--accent-color);
 }
 
-.clients-item:hover,
-.clients-item:focus {
+.clients-icon {
+  width: 106px;
+  height: 60px;
+}
+
+.clients-link:focus,
+.clients-item:hover {
+  border-color: var(--aditional-color);
+}
+
+.clients-link:focus .clients-icon,
+.clients-link:hover .clients-icon {
   fill: var(--aditional-color);
 }
 
 /* footer */
 .footer {
-  display: flex;
-  align-items: center;
   background-color: var(--secondary-background-color);
   color: var(--main-text-color);
   padding: 60px 0;
 }
+
+.main-footer {
+  display: flex;
+  align-items: center;
+}
+
 .light-text {
   color: var(--main-text-color);
 }
@@ -387,7 +409,6 @@ img {
 
 .social {
   margin-left: 70px;
-  margin-right: auto;
 }
 
 .title-join {
@@ -397,7 +418,7 @@ img {
   line-height: 16px;
   text-transform: uppercase;
   margin-bottom: 20px;
-  text-align: center;
+  text-align: start;
 }
 
 .join {
@@ -406,27 +427,29 @@ img {
   justify-content: center;
 }
 
-.join-item {
+.join-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  padding: 12px 12px;
   background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--main-text-color);
 }
 
 .join-item:not(:last-child) {
   margin-right: 10px;
 }
 
-.join-item:hover,
-.join-item:focus {
+.join-link:hover,
+.join-link:focus {
   background-color: var(--aditional-color);
 }
 
 .join-icon {
   width: 20px;
   height: 20px;
-  fill: var(--main-text-color);
 }
 
 /* body portfolio*/
@@ -437,6 +460,7 @@ img {
   margin-bottom: 50px;
   justify-content: center;
 }
+
 .filters-button .filters-btn:not(:last-child) {
   margin-right: 8px;
 }
@@ -478,18 +502,21 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-.project-item:hover,
-.project-item:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
 .project-item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
 
 .project-item:not(:nth-child(-n + 3)) {
   margin-top: 30px;
+}
+.project-link {
+  display: block;
+}
+
+.project-link:hover,
+.project-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-item .project-title {
@@ -499,18 +526,20 @@ img {
   line-height: 1.2;
 }
 
-.project-description {
-  color: var(--secondary-text-color);
-  font-size: 16px;
-  line-height: 1.9;
-  margin-top: 4px;
-}
 .project-text {
   text-align: center;
   padding: 24px 20px;
   border: 1px solid var(--extra-text-color);
   border-top: none;
 }
+
+.project-description {
+  color: var(--secondary-text-color);
+  font-size: 16px;
+  line-height: 1.9;
+  margin-top: 4px;
+}
+
 /*extra styles*/
 
 .title-hidden {
