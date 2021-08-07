@@ -165,7 +165,6 @@ img {
     url(../images/Img-background.jpg);
 
   background-repeat: no-repeat;
-  background-position: absolute;
 }
 
 .prime-title {
@@ -338,15 +337,12 @@ img {
   justify-content: space-between;
 }
 
-.clients-item {
+.clients-link {
+  display: block;
   padding: 16px 32px;
   box-sizing: border-box;
   border: 1px solid var(--accent-color);
   border-radius: 4px;
-}
-
-.clients-link {
-  display: block;
   fill: var(--accent-color);
 }
 
@@ -429,7 +425,7 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--main-text-color) 10;
   fill: var(--main-text-color);
 }
 
