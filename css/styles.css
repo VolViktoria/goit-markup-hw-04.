@@ -347,7 +347,7 @@ img {
 }
 
 .clients-link:focus,
-.clients-item:hover {
+.clients-link:hover {
   border-color: var(--aditional-color);
 }
 
